@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phon-Hunter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header>
+        <h2>Welcome to phone Hunter</h2>
+    </header>
+    <main>
+        <!-- search  -->
+        <section>
+            <div class="mb-3 w-25">
+                <input type="text" class="form-control" id="search-field" placeholder="search here">
+                <button id="btn-search" class="btn btn-primary">Search</button>
+            </div>
+        </section>
+        <section class="container">
+            <!-- main card -->
+            <div id="phone-container" class="row row-cols-1 row-cols-md-3 g-4">
+
+            </div>
+            <!-- show: no phone found text  -->
+            <div id="no-phone-found" class="mt-4 d-none">
+                <h3 class="text-warning">No Phone Found. Please try a new search</h3>
+            </div>
+            <!-- show all item button  -->
+            <div id="show-all" class="text-center d-none">
+                <button id="btn-show-all" class="btn btn-primary">Show All</button>
+            </div>
+        </section>
+        <!-- loader  -->
+        <section id="loader" class="d-none">
+            <div style="height: 200px;" class="d-flex justify-content-center align-items-center">
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+    <!-- script  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
