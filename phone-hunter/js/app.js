@@ -33,7 +33,7 @@ const displayPhones = (phones, dataLimit) => {
             <div class="card-body">
                 <h5 class="card-title">${phone.phone_name}</h5>
                 <p class="card-text">${phone.slug}</p>
-                <button onclick="loadPhoneDetails('${phone.slug}')" href="#" class="btn btn-primary">Show Details</button>
+                <button onclick="loadPhoneDetails('${phone.slug}')" href="#" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#detailsMoreModal">Show Details</button>
             </div>
         </div>
         `;
@@ -83,7 +83,11 @@ const loadPhoneDetails = async id => {
     const url = `https://openapi.programming-hero.com/api/phone/${id}`;
     const res = await fetch(url);
     const data = await res.json();
-    console.log(data.data);
+    displayPhoneDetails(data.data);
+}
+
+const displayPhoneDetails = phone => {
+    console.log(phone);
 }
 
 // loadPhones();
