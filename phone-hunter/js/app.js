@@ -87,7 +87,15 @@ const loadPhoneDetails = async id => {
 }
 
 const displayPhoneDetails = phone => {
-    console.log(phone);
+    const phoneDetailsTitle = document.getElementById('detailsMoreModalLabel');
+    phoneDetailsTitle.innerText = phone.name;
+    const phoneDetails = document.getElementById('phoneDetails');
+    phoneDetails.innerHTML = `
+    <p><span class="fw-semibold">Processor:</span> ${phone.mainFeatures ? phone.mainFeatures.chipSet : 'No information found'} </p>
+    <p><span class="fw-semibold">Memory:</span> ${phone.mainFeatures ? phone.mainFeatures.memory : 'No information found'} </p>
+    <p><span class="fw-semibold">Storage:</span> ${phone.mainFeatures ? phone.mainFeatures.storage : 'No information found'} </p>
+    <p><span class="fw-semibold">Release Date:</span> ${phone.releaseDate ? phone.releaseDate : 'No information found'} </p>
+    `
 }
 
 // loadPhones();
